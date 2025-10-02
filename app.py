@@ -12,9 +12,7 @@ site_data = {
 
 @app.route('/')
 def home():
-    # Error intencional: variable no definida
-    return render_template('index.html', data=site_info)
-
+    return render_template('index.html', data=site_data)
 
 @app.route('/devops')
 def devops():
