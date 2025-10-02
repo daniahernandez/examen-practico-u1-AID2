@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="text-center mb-4">🛠️ Herramientas de DevOps</h2>
+
+<div class="row">
+    {% for herramienta in herramientas %}
+    <div class="col-md-6 mb-3">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="{{ herramienta.icono }} fa-2x text-primary mb-2"></i>
+                <h5 class="card-title">{{ herramienta.nombre }}</h5>
+                <span class="badge bg-secondary">{{ herramienta.categoria }}</span>
+                <p class="card-text mt-2 small">
+                    {% if herramienta.nombre == "Docker" %}
+                    Contenerización de aplicaciones
+                    {% elif herramienta.nombre == "Jenkins" %}
+                    Automatización de CI/CD
+                    {% elif herramienta.nombre == "GitHub Actions" %}
+                    CI/CD integrado con GitHub
+                    {% elif herramienta.nombre == "Kubernetes" %}
+                    Orquestación de contenedores
+                    {% elif herramienta.nombre == "Terraform" %}
+                    Infrastructure as Code
+                    {% elif herramienta.nombre == "Ansible" %}
+                    Automatización de configuración
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+#"materia": "Automatización de Infraestructura Digital II",
+    #"profesor": "Froylan Alonso Pérez Alanis",
+    #"alumno": "Dania Lizeth Meza Hernandez",
+    #"titulo": "Herramientas de Automatización en DevOps"

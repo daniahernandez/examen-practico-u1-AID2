@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    container_name: flask-app
+    volumes:
+      - .:/app  # Esto sincroniza cambios locales con el contenedor
+#"materia": "Automatización de Infraestructura Digital II",
+    #"profesor": "Froylan Alonso Pérez Alanis",
+    #"alumno": "Dania Lizeth Meza Hernandez",
+    #"titulo": "Herramientas de Automatización en DevOps"
